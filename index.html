@@ -31,139 +31,134 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:'Work Sans',sans-serif;color:#fff;
-      background:linear-gradient(180deg,#0b0b0f 0%,#10121c 55%,#0b0b0f 100%);
+      background:radial-gradient(120% 80% at 50% -10%, #16161f 0%, #0b0b0f 60%);
       min-height:100vh;overflow-x:hidden;
     }
-    .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-    .disclaimer{font-size:11px;color:#6a6a75;letter-spacing:.4px;padding:12px 0 0;text-align:center}
-    .brand{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
-    .brand h2{font-family:'Outfit',sans-serif;font-weight:900;font-size:22px;letter-spacing:1px}
-    .brand h2::after{content:"";display:block;width:110px;height:4px;background:var(--gold);margin-top:6px}
-    .brand .domain{font-family:'Work Sans',sans-serif;font-weight:700;font-size:13px;color:var(--grey);letter-spacing:2px}
-    .dots{position:absolute;top:66px;right:24px;opacity:.35;pointer-events:none}
-    .hero{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start;padding:30px 0 60px}
-    .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:var(--gold);background:rgba(240,180,41,.14);border-radius:999px;padding:9px 18px;letter-spacing:1px;margin-bottom:24px}
-    h1{font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(38px,5.6vw,64px);line-height:1.04;text-transform:uppercase;margin-bottom:20px}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+    .disclaimer{font-size:10.5px;color:#5f5f6a;letter-spacing:.4px;padding:11px 0 0;text-align:center}
+    .brand{display:flex;align-items:center;justify-content:space-between;padding:22px 0 6px}
+    .brand h2{font-family:'Outfit',sans-serif;font-weight:900;font-size:21px;letter-spacing:1px}
+    .brand h2::after{content:"";display:block;width:104px;height:4px;background:var(--gold);margin-top:6px}
+    .brand .domain{font-weight:700;font-size:12.5px;color:var(--grey);letter-spacing:2px}
+
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:26px 0 40px;min-height:76vh}
+
+    /* colonna sinistra: testo + foto */
+    .left{position:relative}
+    .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12.5px;color:var(--gold);background:rgba(240,180,41,.14);border-radius:999px;padding:8px 16px;letter-spacing:1px;margin-bottom:20px}
+    h1{font-family:'Outfit',sans-serif;font-weight:900;font-size:clamp(36px,4.8vw,58px);line-height:1.03;text-transform:uppercase;margin-bottom:16px}
     h1 .gold{color:var(--gold)}
-    .sub{font-family:'Outfit',sans-serif;font-weight:400;font-size:clamp(17px,2vw,23px);color:var(--grey);line-height:1.45;margin-bottom:24px;max-width:520px}
-    .ghost{position:absolute;right:-10px;top:-26px;font-family:'Outfit',sans-serif;font-weight:900;font-size:270px;line-height:1;color:rgba(255,255,255,.05);pointer-events:none;user-select:none;z-index:0}
-    .jobs{position:relative;z-index:1;background:var(--ink2);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:18px;padding:22px 24px;max-width:540px;margin-bottom:24px}
-    .jobs h3{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:14px}
-    .jobs ol{list-style:none}
-    .jobs li{display:flex;gap:12px;padding:7px 0;color:#e8e8ee;font-size:15.5px;line-height:1.45}
-    .jobs li .n{font-family:'Outfit',sans-serif;font-weight:900;color:var(--gold);min-width:20px}
-    .autore{position:relative;z-index:1;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:16px;padding:16px 20px;max-width:540px}
-    .autore .nome{font-family:'Outfit',sans-serif;font-weight:900;color:var(--gold);font-size:17px;letter-spacing:.5px}
-    .autore .top20{font-weight:700;font-size:13.5px;margin-top:4px}
-    .autore .bio{color:var(--grey);font-size:12.5px;margin-top:5px;line-height:1.5}
-    .card{position:relative;z-index:1;background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:34px 30px;box-shadow:0 24px 70px rgba(0,0,0,.5)}
-    .card .glow{position:absolute;inset:-1px;border-radius:22px;pointer-events:none;background:radial-gradient(420px 200px at 50% 0%,rgba(240,180,41,.16),transparent 70%)}
-    .card h3{font-family:'Outfit',sans-serif;font-weight:900;font-size:23px;margin-bottom:6px;text-align:center;line-height:1.12}
-    .card p.dove{color:var(--grey);font-size:14.5px;text-align:center;margin-bottom:22px}
-    .form-field{width:100%;background:#0e0e14;border:1px solid var(--line);border-radius:12px;color:#fff;font-family:'Work Sans',sans-serif;font-size:15.5px;padding:15px 16px;outline:none;transition:border .15s}
+    .sub{font-family:'Outfit',sans-serif;font-weight:400;font-size:clamp(16px,1.5vw,20px);color:var(--grey);line-height:1.4;max-width:440px;margin-bottom:14px}
+
+    .photo{position:relative;margin-top:6px;height:420px}
+    .photo .circle{position:absolute;left:38%;top:52%;transform:translate(-50%,-50%);width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#f0b429 0%,#e8890c 100%);opacity:.92}
+    .photo .ring{position:absolute;left:38%;top:52%;transform:translate(-50%,-50%);width:410px;height:410px;border-radius:50%;border:2px solid rgba(240,180,41,.35)}
+    .photo img{position:absolute;left:0;bottom:0;height:470px;width:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.55))}
+    .credit{position:absolute;left:0;bottom:-6px;z-index:2}
+    .credit .nome{font-family:'Outfit',sans-serif;font-weight:900;color:var(--gold);font-size:15px;letter-spacing:.5px}
+    .credit .role{font-size:12px;color:var(--grey);margin-top:2px}
+
+    /* colonna destra: card form */
+    .card{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:22px;padding:32px 30px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+    .card::before{content:"";position:absolute;inset:-1px;border-radius:22px;pointer-events:none;background:radial-gradient(360px 160px at 50% 0%,rgba(240,180,41,.15),transparent 70%)}
+    .card h3{font-family:'Outfit',sans-serif;font-weight:900;font-size:22px;line-height:1.12;margin-bottom:16px;text-align:center}
+    .card h3 .gold{color:var(--gold)}
+    .benefits{list-style:none;margin-bottom:20px}
+    .benefits li{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:14px;color:#dcdce3;line-height:1.4}
+    .benefits li .ck{color:var(--gold);font-weight:900;flex:0 0 auto;margin-top:1px}
+    .divider{height:1px;background:var(--line);margin:4px 0 18px}
+    form{display:flex;flex-direction:column;gap:12px}
+    .form-field{width:100%;background:#0e0e14;border:1px solid var(--line);border-radius:12px;color:#fff;font-family:'Work Sans',sans-serif;font-size:15px;padding:14px 15px;outline:none;transition:border .15s}
     .form-field:focus{border-color:var(--gold)}
     .form-field.error{border-color:#e5484d}
-    .privacy{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--grey);line-height:1.5;margin-top:2px}
+    .privacy{display:flex;gap:9px;align-items:flex-start;font-size:11.5px;color:var(--grey);line-height:1.45}
     .privacy a{color:var(--gold);text-decoration:none}
-    .privacy input{margin-top:3px;accent-color:var(--gold)}
+    .privacy input{margin-top:2px;accent-color:var(--gold)}
     .privacy input.checkbox-error{outline:2px solid #e5484d;outline-offset:2px}
-    .chev{display:flex;flex-direction:column;align-items:center;gap:4px;margin:14px 0 10px}
-    .btn-gold{display:block;width:100%;border:0;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:900;font-size:16px;letter-spacing:.5px;color:#131313;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:999px;padding:19px 20px;transition:transform .12s, box-shadow .12s;box-shadow:0 10px 34px rgba(240,180,41,.35)}
+    .btn-gold{display:block;width:100%;border:0;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:900;font-size:16px;letter-spacing:.4px;color:#131313;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:999px;padding:18px 20px;margin-top:4px;transition:transform .12s;box-shadow:0 10px 32px rgba(240,180,41,.35)}
     .btn-gold:hover{transform:translateY(-2px)}
     .btn-gold:disabled{opacity:.7;cursor:default;transform:none}
+    .reassure{text-align:center;font-size:11.5px;color:#7c7c86;margin-top:10px}
+
     .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(5,5,8,.82);z-index:60;padding:24px}
     .modal.open{display:flex}
     .modal .box{background:var(--ink2);border:1px solid var(--line);border-radius:22px;max-width:430px;width:100%;padding:38px 32px;text-align:center}
     .modal .check{width:64px;height:64px;border-radius:50%;background:rgba(240,180,41,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--gold);font-size:32px;font-family:'Outfit',sans-serif;font-weight:900}
-    .modal h4{font-family:'Outfit',sans-serif;font-weight:900;font-size:24px;margin-bottom:10px}
-    .modal p{color:var(--grey);font-size:14.5px;line-height:1.55;margin-bottom:8px}
-    .modal .spam{font-size:12.5px;color:#8a8a95}
-    .modal .count{margin-top:16px;font-size:13px;color:var(--grey)}
-    footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 34px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
-    footer .fb{font-family:'Work Sans',sans-serif;font-weight:700;font-size:13px;color:var(--gold);letter-spacing:1px}
-    footer .fright{font-size:12px;color:#7a7a85;max-width:640px}
-    footer a{color:#9a9aa5;text-decoration:none;font-size:12px;margin-left:12px}
-    @media(max-width:920px){
-      .hero{grid-template-columns:1fr;gap:32px;padding-top:16px}
-      .ghost{font-size:170px;top:auto;bottom:38%;right:-20px}
-      .dots{display:none}
+    .modal h4{font-family:'Outfit',sans-serif;font-weight:900;font-size:23px;margin-bottom:10px}
+    .modal p{color:var(--grey);font-size:14px;line-height:1.55;margin-bottom:8px}
+    .modal .spam{font-size:12px;color:#8a8a95}
+    .modal .count{margin-top:16px;font-size:12.5px;color:var(--grey)}
+
+    footer{border-top:1px solid var(--line);padding:22px 0 30px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+    footer .fb{font-weight:700;font-size:12.5px;color:var(--gold);letter-spacing:1px}
+    footer .fright{font-size:11px;color:#6f6f79;max-width:660px}
+    footer a{color:#8a8a95;text-decoration:none;font-size:11px;margin-left:10px}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;gap:20px;padding-top:14px;min-height:auto}
+      .photo{height:360px;margin-top:14px}
+      .photo .circle{left:44%}.photo .ring{left:44%}
+      .photo img{left:50%;transform:translateX(-50%);height:400px}
+      .credit{left:50%;transform:translateX(-50%);text-align:center;bottom:-2px}
+      .card{margin-top:6px}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <p class="disclaimer">Sito di DC Academy S.r.l. LinkedIn® è un marchio registrato di LinkedIn Corporation: questa pubblicazione è indipendente e non affiliata.</p>
+    <p class="disclaimer">Sito di DC Academy S.r.l. LinkedIn® è un marchio registrato di LinkedIn Corporation: pubblicazione indipendente e non affiliata.</p>
     <header class="brand">
       <h2>DC ACADEMY</h2>
       <span class="domain">DAVIDECAIAZZO.IT</span>
     </header>
 
-    <svg class="dots" width="240" height="130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="#ffffff" opacity="0.35">
-        <circle cx="10" cy="10" r="2.2"/><circle cx="36" cy="10" r="2.2"/><circle cx="62" cy="10" r="2.2"/><circle cx="88" cy="10" r="2.2"/><circle cx="114" cy="10" r="2.2"/><circle cx="140" cy="10" r="2.2"/><circle cx="166" cy="10" r="2.2"/><circle cx="192" cy="10" r="2.2"/><circle cx="218" cy="10" r="2.2"/>
-        <circle cx="10" cy="36" r="2.2"/><circle cx="36" cy="36" r="2.2"/><circle cx="62" cy="36" r="2.2"/><circle cx="88" cy="36" r="2.2"/><circle cx="114" cy="36" r="2.2"/><circle cx="140" cy="36" r="2.2"/><circle cx="166" cy="36" r="2.2"/><circle cx="192" cy="36" r="2.2"/><circle cx="218" cy="36" r="2.2"/>
-        <circle cx="10" cy="62" r="2.2"/><circle cx="36" cy="62" r="2.2"/><circle cx="62" cy="62" r="2.2"/><circle cx="88" cy="62" r="2.2"/><circle cx="114" cy="62" r="2.2"/><circle cx="140" cy="62" r="2.2"/><circle cx="166" cy="62" r="2.2"/><circle cx="192" cy="62" r="2.2"/><circle cx="218" cy="62" r="2.2"/>
-        <circle cx="10" cy="88" r="2.2"/><circle cx="36" cy="88" r="2.2"/><circle cx="62" cy="88" r="2.2"/><circle cx="88" cy="88" r="2.2"/><circle cx="114" cy="88" r="2.2"/><circle cx="140" cy="88" r="2.2"/><circle cx="166" cy="88" r="2.2"/><circle cx="192" cy="88" r="2.2"/><circle cx="218" cy="88" r="2.2"/>
-        <circle cx="10" cy="114" r="2.2"/><circle cx="36" cy="114" r="2.2"/><circle cx="62" cy="114" r="2.2"/><circle cx="88" cy="114" r="2.2"/><circle cx="114" cy="114" r="2.2"/><circle cx="140" cy="114" r="2.2"/><circle cx="166" cy="114" r="2.2"/><circle cx="192" cy="114" r="2.2"/><circle cx="218" cy="114" r="2.2"/>
-      </g>
-    </svg>
-
     <section class="hero">
-      <span class="ghost">05</span>
-      <div>
+      <div class="left">
         <span class="chip">GUIDA GRATUITA //</span>
-        <h1>L'AGENTE IA<br/><span class="gold">CHE TROVA</span><br/>CLIENTI SU<br/><span class="gold">LINKEDIN</span></h1>
+        <h1>L'AGENTE IA<br/><span class="gold">CHE TROVA</span> CLIENTI<br/>SU <span class="gold">LINKEDIN</span></h1>
         <p class="sub">I 5 lavori che puoi delegare oggi a un collaboratore digitale. Mentre fai altro.</p>
-
-        <div class="jobs">
-          <h3>DENTRO LA GUIDA //</h3>
-          <ol>
-            <li><span class="n">1</span> Osserva ogni giorno chi interagisce con i tuoi contenuti</li>
-            <li><span class="n">2</span> Qualifica i contatti: caldo, tiepido, fuori target</li>
-            <li><span class="n">3</span> Prepara bozze di aggancio nel tuo stile</li>
-            <li><span class="n">4</span> Tiene la memoria dei seguiti: zero contatti dimenticati</li>
-            <li><span class="n">5</span> Ti consegna il quadro: tu decidi, lui prepara</li>
-          </ol>
-        </div>
-
-        <div class="autore">
-          <div class="nome">DAVIDE CAIAZZO</div>
-          <div class="top20">TOP 20 al Mondo in "LinkedIn® Growth" secondo Favikon 2025</div>
-          <div class="bio">Imprenditore | CEO di 4 società | 2x TEDx Speaker<br/>Investitore | Docente | Avvocato | Autore Feltrinelli</div>
+        <div class="photo">
+          <div class="circle"></div>
+          <div class="ring"></div>
+          <img src="davide-hero.png" alt="Davide Caiazzo"/>
+          <div class="credit">
+            <div class="nome">DAVIDE CAIAZZO</div>
+            <div class="role">TOP 20 al Mondo in "LinkedIn® Growth", Favikon 2025</div>
+          </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="glow"></div>
-        <div class="form-wrap" id="formWrap">
-          <h3>VUOI INIZIARE A<br/><span style="color:var(--gold)">FARE SUL SERIO?</span></h3>
-          <p class="dove">Lascia i tuoi dati, la guida arriva subito via email.</p>
-          <form id="leadForm" onsubmit="submitForm(event)" novalidate style="display:flex;flex-direction:column;gap:14px">
-            <input type="text" id="fieldName" name="name" class="form-field" placeholder="Nome e Cognome" required/>
-            <input type="email" id="fieldEmail" name="email" class="form-field" placeholder="Email" required/>
-            <input type="tel" inputmode="tel" pattern="^(?=(?:\D*\d){9,13}\D*$)[\d\s+().\-]+$" title="Inserisci un numero di telefono valido (da 9 a 13 cifre)" id="fieldPhone" name="phone" class="form-field" placeholder="Telefono" required/>
-            <input type="hidden" name="utm_source" id="utm_source"/>
-            <input type="hidden" name="utm_medium" id="utm_medium"/>
-            <input type="hidden" name="utm_campaign" id="utm_campaign"/>
-            <input type="hidden" name="utm_content" id="utm_content"/>
-            <label class="privacy"><input type="checkbox" id="fieldPrivacy" required/><span>Ho letto e accetto la <a href="https://www.iubenda.com/privacy-policy/58787879" target="_blank" rel="noopener">Privacy Policy</a> e acconsento al trattamento dei dati per ricevere la guida.</span></label>
-            <label class="privacy"><input type="checkbox" id="fieldMarketing"/><span>Voglio ricevere anche consigli e novità su automazioni e intelligenza artificiale via email.</span></label>
-            <div class="chev" aria-hidden="true">
-              <svg width="46" height="16"><polyline points="6,3 23,13 40,3" fill="none" stroke="#f0b429" stroke-opacity="0.35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <svg width="46" height="16"><polyline points="6,3 23,13 40,3" fill="none" stroke="#f0b429" stroke-opacity="0.65" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <svg width="46" height="16"><polyline points="6,3 23,13 40,3" fill="none" stroke="#f0b429" stroke-opacity="1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <button type="submit" class="btn-gold" id="submitBtn"><span id="btnText">SCARICA LA GUIDA GRATUITA</span></button>
-          </form>
-        </div>
+        <h3>VUOI INIZIARE A<br/><span class="gold">FARE SUL SERIO?</span></h3>
+        <ul class="benefits">
+          <li><span class="ck">✓</span> Osserva ogni giorno chi interagisce con i tuoi contenuti</li>
+          <li><span class="ck">✓</span> Qualifica i contatti: caldo, tiepido, fuori target</li>
+          <li><span class="ck">✓</span> Prepara le bozze di aggancio nel tuo stile</li>
+          <li><span class="ck">✓</span> Tiene la memoria dei seguiti: zero contatti persi</li>
+          <li><span class="ck">✓</span> Ti consegna il quadro: tu decidi, lui prepara</li>
+        </ul>
+        <div class="divider"></div>
+        <form id="leadForm" onsubmit="submitForm(event)" novalidate>
+          <input type="text" id="fieldName" name="name" class="form-field" placeholder="Nome e Cognome" required/>
+          <input type="email" id="fieldEmail" name="email" class="form-field" placeholder="Email" required/>
+          <input type="tel" inputmode="tel" pattern="^(?=(?:\D*\d){9,13}\D*$)[\d\s+().\-]+$" title="Inserisci un numero di telefono valido (da 9 a 13 cifre)" id="fieldPhone" name="phone" class="form-field" placeholder="Telefono" required/>
+          <input type="hidden" name="utm_source" id="utm_source"/>
+          <input type="hidden" name="utm_medium" id="utm_medium"/>
+          <input type="hidden" name="utm_campaign" id="utm_campaign"/>
+          <input type="hidden" name="utm_content" id="utm_content"/>
+          <label class="privacy"><input type="checkbox" id="fieldPrivacy" required/><span>Accetto la <a href="https://www.iubenda.com/privacy-policy/58787879" target="_blank" rel="noopener">Privacy Policy</a> e il trattamento dei dati per ricevere la guida.</span></label>
+          <label class="privacy"><input type="checkbox" id="fieldMarketing"/><span>Voglio ricevere anche consigli su automazioni e intelligenza artificiale.</span></label>
+          <button type="submit" class="btn-gold" id="submitBtn"><span id="btnText">SCARICA LA GUIDA GRATUITA</span></button>
+        </form>
+        <p class="reassure">Nessuno spam. La guida arriva subito via email.</p>
       </div>
     </section>
 
     <footer>
       <span class="fb">DC ACADEMY</span>
       <span class="fright">DC Academy S.r.l. | P.IVA 12856080964 | academy@davidecaiazzo.it
-        <a href="https://www.iubenda.com/privacy-policy/58787879" target="_blank" rel="noopener">Privacy Policy</a>
-        <a href="https://www.iubenda.com/privacy-policy/58787879/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
+        <a href="https://www.iubenda.com/privacy-policy/58787879" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://www.iubenda.com/privacy-policy/58787879/cookie-policy" target="_blank" rel="noopener">Cookie</a>
       </span>
     </footer>
   </div>
